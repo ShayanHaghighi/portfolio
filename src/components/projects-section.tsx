@@ -6,17 +6,19 @@ export default function ProjectSection({projects}:{projects:Project[]}){
     <section id="projects" className="mt-16">
         <h2 className="text-2xl font-bold">Selected projects</h2>
         <p className="text-gray-400 mt-2 max-w-2xl">
-            A short selection of projects I’ve worked on — from CV pipelines and local AI tooling to games
-            and
-            front-end experiences.
+            A short selection of projects I’ve worked on
         </p>
 
-        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <motion.div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((proj) => (
                 <motion.article
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    viewport={{ once: true, amount: 0.1 }}
                     key={proj.id}
                     whileHover={{y: -6, boxShadow: "0 12px 30px rgba(0,0,0,0.5)"}}
-                    className="rounded-2xl bg-gradient-to-br from-gray-900 to-gray-800 p-6 border border-gray-800"
+                    className="rounded-2xl bg-gradient-to-br from-gray-900 to-gray-800 p-6 border border-gray-800 "
                 >
                     <div className="flex items-center justify-between">
                         <h3 className="font-semibold text-lg">{proj.title}</h3>
@@ -56,7 +58,7 @@ export default function ProjectSection({projects}:{projects:Project[]}){
                     </div>
                 </motion.article>
             ))}
-        </div>
+        </motion.div>
     </section>
     )
 }
