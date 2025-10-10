@@ -1,0 +1,90 @@
+[
+  {
+    "id": "mimecast-2024-2025",
+    "title": "Software Engineer",
+    "shortDescription": "Enhanced service reliability by developing a custom Spring Boot proxy, improving test reliability to 98%. Delivered technical presentations to 40+ engineers, and managed multiple CI/CD pipelines using Jenkins and Docker.",
+    "startDate": "2024-09-01",
+    "endDate": "2025-09-01",
+    "employer": "Mimecast",
+    "tags": [
+      "Spring Boot",
+      "CI/CD",
+      "Jenkins",
+      "Docker",
+      "Automated Testing",
+      "Software Engineering"
+    ]
+  },
+  {
+    "id": "university-of-birmingham-ta-2025-present",
+    "title": "Teaching Assistant",
+    "shortDescription": "Helped run lab sessions for Object Oriented Programming, supporting over 500 students weekly and boosting student satisfaction by 12%.",
+    "startDate": "2025-09-01",
+    "endDate": "present",
+    "employer": "University of Birmingham",
+    "tags": [
+      "Teaching",
+      "Object Oriented Programming",
+      "Student Support",
+      "Lab Sessions"
+    ]
+  },
+  {
+    "id": "university-of-birmingham-personal-tutor-2023-2025",
+    "title": "Personal Tutor",
+    "shortDescription": "Tutored 4 students, improving their predicted grades by 2 levels on average by adapting teaching methods to individual learning styles.",
+    "startDate": "2023-09-01",
+    "endDate": "2025-01-01",
+    "employer": "Self Employed",
+    "tags": [
+      "Tutoring",
+      "Academic Support",
+      "Student Development",
+      "Personalized Learning"
+    ]
+  },
+  {
+    "id": "university-of-birmingham-eps-ambassador-2023-2024",
+    "title": "Student Ambassador for EPS",
+    "shortDescription": "Aided in the operation of an Open Day event, providing tours and information to over 400 prospective students and parents, promoting the university's academic offerings.",
+    "startDate": "2023-10-01",
+    "endDate": "2024-05-01",
+    "employer": "University of Birmingham",
+    "tags": [
+      "Student Ambassador",
+      "Open Day",
+      "Prospective Students",
+      "Campus Tours",
+      "Public Speaking"
+    ]
+  },
+  {
+    "id": "vodafone-work-experience-2021",
+    "title": "Work Experience - Vodafone",
+    "shortDescription": "Shadowed industry professionals, including data scientists, to learn about the role of data science and AI in the telecommunications sector.",
+    "startDate": "2021-08-01",
+    "endDate": "2021-08-31",
+    "tags": [
+      "Data Science",
+      "AI",
+      "Telecommunications",
+      "Machine Learning",
+      "Industry Shadowing"
+    ]
+  },
+  {
+    "id": "nice-systems-work-experience-2021",
+    "title": "Work Experience - NICE Systems",
+    "shortDescription": "Participated in a 'Dragons' Den' style project to create a product combining AI and psychology for police interview situations. Delivered a persuasive pitch, securing 'investment' from 4 out of 5 dragons.",
+    "startDate": "2021-07-01",
+    "endDate": "2021-07-31",
+    "tags": [
+      "AI",
+      "Psychology",
+      "Product Design",
+      "Sales Pitch",
+      "Innovation",
+      "Teamwork"
+    ]
+  }
+]
