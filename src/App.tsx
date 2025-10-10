@@ -1,5 +1,4 @@
 import {motion} from "framer-motion";
-import './App.css'
 import ProjectSection from "./components/projects-section.tsx";
 import Nav from "./components/nav.tsx";
 import {useState} from "react";
