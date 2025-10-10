@@ -1,13 +1,13 @@
 ---
-'id:': ai-note-taker
-'title:': Local AI Note Taker
-'description:': 'A privacy-first notes tool: markdown files, embedding store (ChromaDB
+id: ai-note-taker
+title: Local AI Note Taker
+description: 'A privacy-first notes tool: markdown files, embedding store (ChromaDB
   style), semantic search and local hosting.'
-'tags:':
+tags:
   - NLP
   - Embeddings
   - TypeScript
-'highlights:':
+highlights:
   - Integrates with Obsidian
   - Spring Boot backend + Ollama embeddings
 repo: "#"
