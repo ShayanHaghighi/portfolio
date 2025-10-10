@@ -1,18 +1,7 @@
 import type {Project} from "../types/project.ts";
 
 export const projects: Project[] = [
-    {
-        id: "yolov8-pipeline",
-        title: "YOLOv8 Model Training Pipeline",
-        description:
-            "Automated labeling + retraining pipeline using CVAT, Jenkins, and YOLOv8 to iterate models per room.",
-        tags: ["Computer Vision", "YOLOv8", "CVAT", "Jenkins"],
-        highlights: [
-            "Daily job to create labeling tasks from new images",
-            "Manual retraining job that archives models with metrics",
-        ],
-        repo: "#",
-    },
+
     {
         id: "godot-othello",
         title: "Othello / 2-player Board Game (Godot)",
