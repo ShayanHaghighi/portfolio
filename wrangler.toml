@@ -1,5 +1,5 @@
 # Top-level configuration
-name = "my-worker"
+name = "portfolio"
 main = "src/main.tsx"
 compatibility_date = "2025-10-10"
 
