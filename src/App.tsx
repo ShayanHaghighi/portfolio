@@ -1,10 +1,10 @@
 import {motion} from "framer-motion";
 import './App.css'
-import {projects} from "./notes/projects.ts";
 import ProjectSection from "./components/projects-section.tsx";
 import Facts from "./components/facts.tsx";
 import Nav from "./components/nav.tsx";
 import {type ReactElement, useState} from "react";
+import projects from './data/projects.json'
 
 // Portfolio landing page (single-file React + Tailwind + Framer Motion)
 // - Default export a React component
@@ -37,16 +37,6 @@ export default function PortfolioLandingPage() {
 
     const [currentSection, setCurrentSection] = useState("Projects");
 
-    function getSection() {
-        switch (currentSection) {
-            case "Projects":
-                return <ProjectSection projects={projects}/>
-            case "WorkExp":
-                return <div>work exp</div>
-            case "CV":
-                return <div>CV</div>
-        }
-    }
 
     return (
         <div
@@ -122,6 +112,7 @@ export default function PortfolioLandingPage() {
                     {
                         sections.map((section) => (
                             <button
+                                key={section.type}
                                 className="w-full items-center gap-2 py-4 bg-transparent cursor-pointer hover:shadow-none hover:bg-gray-700 hover:text-black  transition-all duration-200 border border-gray-700 rounded-full text-sm"
                                 onClick={() => setCurrentSection(section.type)}>
                                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-pink-400 text-lg font-bold">{section.type}</span>
@@ -136,6 +127,7 @@ export default function PortfolioLandingPage() {
                     sections.map(section => (
                          section.type == currentSection &&
                         <motion.div
+                            key={section.type}
                             initial={{opacity: 0, y: 6}}
                             animate={{opacity: 1, y: 0}}
                             transition={{duration: 0.3}}
