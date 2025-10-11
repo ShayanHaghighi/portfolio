@@ -1,19 +1,7 @@
 import {motion} from "framer-motion";
-import type {WorkExp} from "../types/workExp.ts";
-import {useEffect, useState} from "react";
+import type {WorkExp} from "../../types/workExp.ts";
 
 export default function WorkExperience({workExp}: { workExp: WorkExp[] }) {
-    const [sortedDates, setSortedDates] = useState<WorkExp[]>([])
-
-    useEffect(() => {
-        const sorted = workExp.sort((a, b) => {
-            if (a.endDate.toLowerCase() === "present") {
-                return -1
-            }
-            return new Date(a.endDate) > new Date(b.endDate) ? -1 : 1;
-        })
-        setSortedDates(sorted)
-    }, [workExp])
 
     const dateFormat: Intl.DateTimeFormatOptions = {year: "numeric", month: "short"};
 
@@ -34,14 +22,14 @@ export default function WorkExperience({workExp}: { workExp: WorkExp[] }) {
     }
 
     return (
-        <section id="projects" className="mt-16">
+        <section id="projects" className="mt-2">
             <h2 className="text-2xl font-bold">Work Experience</h2>
             <p className="text-gray-400 mt-2 max-w-2xl">
-                A short selection of projects I’ve worked on
+                Key work experience in recent years
             </p>
 
             <motion.div className="mt-6 flex flex-col flex-nowrap gap-0 px-[10%]">
-                {sortedDates.map((proj) => (
+                {workExp.map((proj) => (
                     <article
                         key={proj.id}
                         className="rounded-2xl"
@@ -51,23 +39,26 @@ export default function WorkExperience({workExp}: { workExp: WorkExp[] }) {
                                 <div className="size-4 rounded-full border-2 -m-0 border-gray-500"></div>
                                 <div className="w-0.5 h-full bg-gray-500"></div>
                             </div>
-                            <motion.div className="flex-1 my-8" initial={{opacity: 0, y: 20}}
+                            <motion.div className="flex-1 my-8" initial={{opacity: 0.0, y: 20}}
                                         whileInView={{opacity: 1, y: 0}}
                                         transition={{duration: 0.6, ease: "easeOut"}}
                                         viewport={{once: true, amount: 0.3}}
                                         key={proj.id}>
-                                <div className="flex items-center justify-between">
-                                    <div className="flex flex-row items-center"><h3 className="font-semibold text-lg">{proj.title}</h3>
+                                <div className="flex md:flex-row flex-col items-start md:items-center justify-between">
+                                    <div className="flex flex-row items-center justify-between ">
+                                        <div className="font-semibold text-lg w-fit">{proj.title}</div>
                                         {proj.employer && <>
-                                            <div className="text-xl text-gray-400 mx-4">•</div>
-                                        <div className="text-xs text-gray-400">{proj.employer}</div></>}
+                                            <div className="text-xl text-center text-gray-400 mx-4">•</div>
+                                            <div className="text-xs text-left text-gray-400">{proj.employer}</div>
+                                        </>}
                                     </div>
 
-                                    <div className="flex flex-row items-center">
+                                    <div className="flex flex-row md:mt-0 mt-1 items-center">
                                         <div
                                             className="text-xs text-gray-400 font-semibold">{formatDate(proj.startDate)}</div>
                                         <div className="text-xs text-gray-400 mx-1">-</div>
-                                        <div className="text-xs text-gray-400 font-semibold">{formatDate(proj.endDate)}</div>
+                                        <div
+                                            className="text-xs text-gray-400 font-semibold">{formatDate(proj.endDate)}</div>
                                     </div>
                                 </div>
 
