@@ -5,9 +5,7 @@ description: A Java application that solves Minesweeper puzzles using constraint
 tags:
 - Java
 - JavaFX
-- Algorithms
 - Constraint Satisfaction
-- Backtracking
 highlights:
 - Integrated GUI and solver modes
 - Efficient backtracking-based algorithm

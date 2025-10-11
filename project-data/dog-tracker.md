@@ -4,8 +4,8 @@ title: "YOLOv8 Model Training Pipeline"
 description: "Automated labeling + retraining pipeline using CVAT, Jenkins, and YOLOv8 to iterate models per room."
 tags:
   - "Computer Vision"
-  - "YOLOv8"
-  - "CVAT"
+  - "ML pipeline"
+  - "GCP pub/sub"
   - "Jenkins"
 highlights:
   - "Daily job to create labeling tasks from new images"

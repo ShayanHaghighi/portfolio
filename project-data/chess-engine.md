@@ -5,9 +5,9 @@ description: A Python chess engine with a Pygame GUI and advanced search optimis
 
 tags:
 - Python
-- Pygame
-- Chess Engine
 - AI
+- Pygame
+- Optimisation
 - Minimax
 highlights:
 - Full chess GUI built with Pygame
@@ -18,7 +18,13 @@ repo: ""
 demo: ""
 ---
 This project implements a complete chess engine using the python-chess library for move
-logic and Pygame for the user interface. It features iterative deepening, transposition
-tables, and move ordering to enhance performance. The engine utilises the minimax
-algorithm with alpha-beta pruning to evaluate moves efficiently, balancing computational
+logic and Pygame for the user interface. 
+
+It features:
+- iterative deepening
+- transposition tables
+- move ordering to enhance performance 
+- search tree pruning
+
+The engine utilises the minimax algorithm with alpha-beta pruning to evaluate moves efficiently, balancing computational
 depth with time constraints.
