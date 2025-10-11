@@ -1,4 +1,5 @@
 ---
+position: 4
 id: verbatim
 title: Verbatim
 description: A social game like Kahoot where players guess which friend said a quote.

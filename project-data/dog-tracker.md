@@ -1,4 +1,5 @@
 ---
+position: 2
 id: "yolov8-pipeline"
 title: "YOLOv8 Model Training Pipeline"
 description: "Automated labeling + retraining pipeline using CVAT, Jenkins, and YOLOv8 to iterate models per room."

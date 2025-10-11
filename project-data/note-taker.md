@@ -1,4 +1,5 @@
 ---
+position: 1
 id: ai-note-taker
 title: Local AI Note Taker (In Progress)
 description: 'An AI-organised note taking tool that uses keyword extraction + entity linking to organise notes based on the Wikipedia knowledge base hierarchy'

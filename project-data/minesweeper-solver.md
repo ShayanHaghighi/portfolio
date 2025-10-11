@@ -1,4 +1,5 @@
 ---
+position: 6
 id: minesweeper-solver
 title: Minesweeper Solver
 description: A Java application that solves Minesweeper puzzles using constraint satisfaction and backtracking algorithms.

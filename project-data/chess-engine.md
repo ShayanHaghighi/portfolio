@@ -1,8 +1,8 @@
 ---
+position: 5
 id: chess-engine
 title: Chess Engine
 description: A Python chess engine with a Pygame GUI and advanced search optimisations.
-
 tags:
 - Python
 - AI
