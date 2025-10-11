@@ -1,7 +1,6 @@
-import About from "./sections/about/about.tsx";
 import Header from "./sections/header/header.tsx";
-import {MainSection} from "./sections/main/main-section.tsx";
 import {Footer} from "./sections/footer/Footer.tsx";
+import MyRouter from "./router.tsx";
 
 
 export default function PortfolioLandingPage() {
@@ -13,11 +12,8 @@ export default function PortfolioLandingPage() {
             <Header/>
 
             <main className="max-w-6xl mx-auto px-6 py-6 flex flex-col items-center">
-                {/* Hero */}
-                <About/>
 
-                {/* Main Section */}
-                <MainSection/>
+                <MyRouter/>
 
                 {/* Footer */}
                 <Footer/>

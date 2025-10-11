@@ -1,5 +1,5 @@
 import {motion} from "framer-motion";
-import StrongText from "../../components/strong-text.tsx";
+import StrongText from "../../../components/strong-text.tsx";
 
 export default function About() {
     return (

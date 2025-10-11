@@ -1,5 +1,5 @@
 import {motion} from "framer-motion";
-import type {WorkExp} from "../../types/workExp.ts";
+import type {WorkExp} from "../../../types/workExp.ts";
 
 export default function WorkExperience({workExp}: { workExp: WorkExp[] }) {
 

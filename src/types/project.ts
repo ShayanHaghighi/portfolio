@@ -6,5 +6,5 @@ export type Project = {
     highlights?: string[];
     repo?: string;
     demo?: string;
-    content?: string;
+    content: string;
 };

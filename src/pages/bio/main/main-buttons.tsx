@@ -1,4 +1,4 @@
-import type {Section} from "../../types/sections.ts";
+import type {Section} from "../../../types/sections.ts";
 
 interface MainButtonProps {
     currentSection: Section,

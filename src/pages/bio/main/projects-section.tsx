@@ -1,7 +1,8 @@
-import type {Project} from "../../types/project.ts";
+import type {Project} from "../../../types/project.ts";
 import {motion} from "framer-motion";
 
 import {FaArrowAltCircleRight} from "react-icons/fa";
+import {Link} from "react-router";
 
 export default function ProjectSection({projects}: { projects: Project[] }) {
     return (
@@ -39,8 +40,8 @@ export default function ProjectSection({projects}: { projects: Project[] }) {
                         </div>
 
                         <div className="mt-4 w-full">
-                            <button
-                                onClick={() => alert(`Coming soon!`)}
+                            <Link
+                                to={`project/${proj.id}`}
                                 className="w-full ml-auto mt-4 flex  text-lg text-center p-1 rounded-full gradient cursor-pointer"
                             >
                                 <span
@@ -48,7 +49,7 @@ export default function ProjectSection({projects}: { projects: Project[] }) {
                                     <span>View</span>
                                     <FaArrowAltCircleRight/>
                                 </span>
-                            </button>
+                            </Link>
                         </div>
                     </motion.article>
                 ))}

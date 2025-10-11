@@ -1,9 +1,9 @@
 import {useState} from "react";
-import type {Section} from "../../types/sections.ts";
+import type {Section} from "../../../types/sections.ts";
 import ProjectSection from "./projects-section.tsx";
-import projects from "../../data/projects.json";
+import projects from "../../../data/projects.json";
 import WorkExperience from "./wex-section.tsx";
-import workExp from "../../data/work-experience.json";
+import workExp from "../../../data/work-experience.json";
 import {MainButtons} from "./main-buttons.tsx";
 
 export function MainSection() {
