@@ -1,5 +1,4 @@
 import {FaLinkedin} from "react-icons/fa";
-import {TfiNewWindow} from "react-icons/tfi";
 
 export default function LinkedinButton() {
     return (
@@ -10,7 +9,6 @@ export default function LinkedinButton() {
             >
                 <FaLinkedin className="size-5"/>
                 <span className="font-semibold">LinkedIn</span>
-                <TfiNewWindow className="hidden sm:inline-block size-4 -translate-y-0.5"/>
             </a>
     )
 }
