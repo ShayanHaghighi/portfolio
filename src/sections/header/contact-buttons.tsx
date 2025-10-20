@@ -1,6 +1,6 @@
-import LinkedinButton from "./linkedin-button.tsx";
-import Divider from "./divider.tsx";
-import {CvButton} from "./cv-button.tsx";
+import LinkedinButton from "./linkedin-button";
+import Divider from "./divider";
+import {CvButton} from "./cv-button";
 
 
 export default function ContactButtons() {

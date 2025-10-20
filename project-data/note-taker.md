@@ -11,7 +11,7 @@ tags:
 highlights:
   - Integrates with Obsidian
   - Spring Boot backend + Ollama embeddings
-repo: "#"
+ repo: "#"
 ---
 - Built a Spring Boot app for semantic note-taking with NLP-based keyword extraction and entity linking
 - Integrated Wikipedia’s category hierarchy to organise notes into interactive tree and graph views

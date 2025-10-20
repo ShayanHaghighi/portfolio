@@ -1,5 +1,5 @@
-import type {Project} from "../../../../types/project.ts";
-import {ProjectBlock} from "./project-block.tsx";
+import type {Project} from "@/types/project";
+import ProjectBlock from "./project-block";
 
 export default function ProjectSection({projects}: { projects: Project[] }) {
     return (
@@ -18,7 +18,6 @@ export default function ProjectSection({projects}: { projects: Project[] }) {
                     <ProjectBlock key={project.id} project={project}/>
                 ))}
             </div>
-
         </section>
     )
 }

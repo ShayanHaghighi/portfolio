@@ -1,10 +1,10 @@
-import {Link} from "react-router";
+import Link from "next/link";
 import {FaArrowAltCircleRight} from "react-icons/fa";
 
-export function ProjectViewButton(props: { id: string }) {
+export default function ProjectViewButton(props: { id: string }) {
     return <div className="mt-4 w-full">
         <Link
-            to={`project/${props.id}`}
+            href={`/project/${props.id}`}
             className="w-full ml-auto mt-4 flex  text-lg text-center p-1 rounded-full gradient cursor-pointer"
         >
                 <span

@@ -1,10 +1,11 @@
+'use client'
 import {motion} from "framer-motion";
-import StrongText from "../../../components/strong-text.tsx";
+import StrongText from "@/components/strong-text";
 
 export default function About() {
     return (
             <section
-                className="max-w-3xl flex flex-wrap md:flex-nowrap items-start md:justify-between justify-center gap-4">
+                className="max-w-3xl flex flex-wrap md:flex-nowrap items-start md:justify-between justify-center gap-4 ">
                 <motion.div
                     initial={{opacity: 0, y: 12}}
                     animate={{opacity: 1, y: 0}}
@@ -13,7 +14,7 @@ export default function About() {
                 >
                     <h1 className="text-4xl font-semibold">About Me</h1>
 
-                    <span className="text-gray-300 max-w-xl">
+                    <span className="text-gray-300 max-w-xl text-lg">
                             4th-year Computer Science student at the <strong>University of Birmingham</strong>, predicted 1st Class
                             Honours (avg. 85%).
                             I have hands-on
@@ -34,7 +35,6 @@ export default function About() {
                     </div>
                 </motion.div>
 
-                {/*<Facts/>*/}
 
 
             </section>

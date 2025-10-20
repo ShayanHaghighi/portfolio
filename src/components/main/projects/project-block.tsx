@@ -1,9 +1,9 @@
-import type {Project} from "../../../../types/project.ts";
+import type {Project} from "@/types/project";
 import {motion} from "framer-motion";
-import {Tags} from "./tags.tsx";
-import {ProjectViewButton} from "./project-view-button.tsx";
+import Tags from "./tags";
+import ProjectViewButton from "./project-view-button";
 
-export function ProjectBlock({project}: { project: Project }) {
+export default function ProjectBlock({project}: { project: Project }) {
     return <motion.article
         initial={{opacity: 0, y: 20}}
         whileInView={{opacity: 1, y: 0}}

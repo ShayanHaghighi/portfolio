@@ -1,7 +1,0 @@
-# Top-level configuration
-name = "portfolio"
-main = "src/main.tsx"
-compatibility_date = "2025-10-10"
-
-workers_dev = false
-

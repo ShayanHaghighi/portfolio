@@ -1,5 +1,5 @@
-import ContactButtons from "./contact-buttons.tsx";
-import {Link} from "react-router";
+import ContactButtons from "./contact-buttons";
+import Link from "next/link";
 
 export default function Header() {
     return (
@@ -9,7 +9,7 @@ export default function Header() {
                 <div className="flex items-center gap-3">
                     <Link
                         className="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-500 to-pink-500 flex items-center justify-center font-bold text-white cursor-pointer"
-                    to="/"
+                    href="/"
                     >SH
                     </Link>
                     <div>

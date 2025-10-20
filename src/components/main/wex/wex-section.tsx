@@ -1,5 +1,5 @@
-import type {WorkExp} from "../../../../types/workExp.ts";
-import {WexItem} from "./wex-item.tsx";
+import type {WorkExp} from "@/types/workExp.ts";
+import WexItem from "./wex-item";
 
 export default function WorkExperience({workExp}: { workExp: WorkExp[] }) {
 
@@ -23,7 +23,7 @@ export default function WorkExperience({workExp}: { workExp: WorkExp[] }) {
 
     return (
         <section id="projects" className="mt-2">
-            <h2 className="text-2xl font-bold">Work Experience</h2>
+            <h2 className="text-4xl font-bold">Work Experience</h2>
             <p className="text-gray-400 mt-2 max-w-2xl">
                 Key work experience in recent years
             </p>

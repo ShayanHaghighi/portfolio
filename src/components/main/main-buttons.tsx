@@ -1,11 +1,11 @@
-import type {Section} from "../../../types/sections.ts";
+import type {Section} from "@/types/sections";
 
 interface MainButtonProps {
     currentSection: Section,
     setCurrentSection: (section: Section) => void
 }
 
-export function MainButtons({currentSection, setCurrentSection}: MainButtonProps) {
+export default function MainButtons({currentSection, setCurrentSection}: MainButtonProps) {
     return <div
         className="w-full flex flex-col sm:flex-row justify-between items-center gap-4 px-4 my-6 text-[#646cff]">
         <button
