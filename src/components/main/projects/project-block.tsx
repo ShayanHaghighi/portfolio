@@ -1,16 +1,12 @@
 import type {Project} from "@/types/project";
-import {motion} from "framer-motion";
 import Tags from "./tags";
 import ProjectViewButton from "./project-view-button";
 
 export default function ProjectBlock({project}: { project: Project }) {
-    return <motion.article
-        initial={{opacity: 0, y: 20}}
-        whileInView={{opacity: 1, y: 0}}
-        transition={{duration: 0.6, ease: "easeOut"}}
-        viewport={{once: true, amount: 0.1}}
 
-        className="rounded-2xl bg-gradient-to-br from-gray-900 to-gray-800 p-6 border border-gray-800 flex flex-col justify-between"
+    return <article
+
+        className="fade-up-on-view rounded-2xl bg-gradient-to-br from-gray-900 to-gray-800 p-6 border border-gray-800 flex flex-col justify-between"
     >
         <div>
             <div className="flex items-center justify-between">
@@ -24,5 +20,5 @@ export default function ProjectBlock({project}: { project: Project }) {
 
         <ProjectViewButton id={project.id}/>
 
-    </motion.article>;
+    </article>
 }

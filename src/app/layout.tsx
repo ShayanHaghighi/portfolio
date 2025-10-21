@@ -1,11 +1,9 @@
-import type {Metadata} from "next";
 import "./globals.css";
 import Header from "@/sections/header/header";
 import {Footer} from "@/sections/footer/Footer";
-import type {AppProps} from "next/app";
 import Head from "next/head";
 
-export default function Layout({Component, pageProps}: AppProps) {
+export default function Layout({children}:{  children: React.ReactNode}) {
     return (
         <html lang="en">
         <Head>
@@ -35,7 +33,7 @@ export default function Layout({Component, pageProps}: AppProps) {
 
             <Header/>
             <main className="max-w-6xl mx-auto px-6 py-6 flex flex-col items-center">
-                <Component {...pageProps} />
+                {children}
                 <Footer/>
             </main>
 

@@ -1,1 +1,1 @@
-export type Section = "Projects" | "WorkExp"
+export type Section = "projects" | "workexp"

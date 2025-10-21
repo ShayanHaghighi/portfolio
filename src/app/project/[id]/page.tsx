@@ -1,41 +1,32 @@
-import projects from "../../../../public/data/projects.json";
-import type {Project} from "@/types/project";
+import projects from "@/data/projects.json";
 import {FaArrowAltCircleLeft} from "react-icons/fa";
 import Link from "next/link";
+import {notFound} from "next/navigation";
+import Image from "next/image";
 
-export async function getStaticPaths() {
 
-    const paths =  projects.map((project: Project) => ({params: {id: project.id}}))
-    return {
-        paths,
-        fallback: false,
-    }
+export async function generateStaticParams() {
+    return projects.map(p => ({id: p.id}));
 }
 
-export async function getStaticProps({ params }:{params:{id: string}}) {
-    const res = projects.filter(project => project.id === params.id)
-    if (res.length === 0) {
-        console.log("no projects found")
+export default async function ProjectFull({params}: { params: { id: string } }) {
+    const {id} = await params;
+    const project = projects.find(p => p.id === id);
+    console.log(project?.id);
+    if (!project) {
+        // This tells Next.js to render the 404 page
+        notFound();
     }
-
-    const project = res[0]
-
-
-    return {props: {project}}
-}
-
-export default function ProjectFull({project}: { project: Project }) {
 
     return (
         <div>
             <Link href="/" className="flex flex-row items-center gap-4 bg-gray-600 w-fit p-4 rounded-full">
-            <FaArrowAltCircleLeft/>
+                <FaArrowAltCircleLeft/>
                 Back
             </Link>
             <div className="w-full flex flex-col items-center justify-center">
                 <h1 className="text-3xl font-bold mb-4">Under construction</h1>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/UnderCon.svg" alt="projects"/>
+                <Image height={100} width={100} src="/UnderCon.svg" alt="projects"/>
             </div>
 
             <div>

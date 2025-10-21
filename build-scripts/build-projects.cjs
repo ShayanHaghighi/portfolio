@@ -1,5 +1,5 @@
 // scripts/build-projects.cjs
-const fs = require('fs');
+const fs = require('fs-extra');
 const path = require('path');
 const matter = require('gray-matter');
 const {marked} = require('marked');

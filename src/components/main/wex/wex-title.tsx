@@ -1,7 +1,6 @@
 import type {WorkExp} from "@/types/workExp.ts";
 
 export default function WexTitle({workExp}: { workExp: WorkExp }) {
-    console.log(workExp)
     return <div className="flex flex-row items-center justify-between ">
         <div className="font-semibold text-2xl w-fit">{workExp.title}</div>
         {workExp.employer && <>
