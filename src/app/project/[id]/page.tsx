@@ -9,8 +9,6 @@ export async function generateStaticParams() {
     return projects.map(p => ({id: p.id}));
 }
 
-export const runtime = 'edge';
-
 export default async function ProjectFull({params}: { params: { id: string } }) {
     const {id} = await params;
     const project = projects.find(p => p.id === id);
