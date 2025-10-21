@@ -3,7 +3,7 @@ export function Footer() {
         borderColor: "rgba(200,200,255, 0.1)",
     }}>
 
-        <div>Built with Next.js + TypeScript • SSG</div>
+        <div>Built with Next.js + TypeScript</div>
         <div>Source code at can be found <a className="underline"
                                             href="https://github.com/ShayanHaghighi/portfolio">here</a>
         </div>

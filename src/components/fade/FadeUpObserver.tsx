@@ -10,7 +10,7 @@ export default function FadeUpObserver({section}:{section:Section}) {
                     if (entry.isIntersecting) entry.target.classList.add("visible");
                 });
             },
-            { threshold: 0.3 }
+            { threshold: 0.1 }
         );
         document.querySelectorAll(".fade-up-on-view").forEach(el => observer.observe(el));
 
