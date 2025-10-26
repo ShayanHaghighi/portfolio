@@ -7,6 +7,7 @@
     --black: #000000;
     --white: #FFFFFF;
     --light: rgba(0, 0, 0, 0.49);
+    --dark: rgba(48, 48, 48, 0.66);
     --code-bg: rgba(255, 255, 255, 0.66);
     --code-color: rgb(30, 30, 30);
     --light-pink-1: #ff70a2;
@@ -19,6 +20,7 @@ html[data-theme='dark'] {
     --black: #FFFFFF;
     --white: #000000;
     --light: rgba(255, 255, 255, 0.49);
+    --dark: rgba(255, 255, 255, 0.66);
     --code-color: rgb(220, 220, 220);
     --light-pink-1: #ffc7e0;
     --light-pink-2: #eacdff;
@@ -64,14 +66,14 @@ strong {
 
 .img-text{
     font-style: italic;
-    color: rgba(255, 255, 255, 0.66);
+    color: var(--dark);
 }
 
 img{
     margin: 0 auto;
     width: 30rem;
     padding-bottom: 0.5rem;
-    border-bottom: .1rem solid rgba(255, 255, 255, 0.4);
+    border-bottom: .1rem solid var(--dark);
 }
 
 /* Tables */
@@ -87,6 +89,8 @@ table {
     border-radius: 0.1rem;
 }
 
+
+
 td{
     width: 3rem;
     height: 3rem;
@@ -96,7 +100,15 @@ td{
     padding: 0.5rem 0.5rem;
     background-color: rgba(255, 255, 255, 0.03);
 }
+@media (width <= 600px){
+    td {
+        width: 1.5rem;
+        height: 1.5rem;
+        padding: 0;
+        font-size: .75rem;
 
+    }
+}
 td strong {
     text-shadow: 0 0 1rem #ffc9c9;
     font-size: 1rem;
@@ -128,7 +140,7 @@ code {
 
 hr {
     margin: 1rem 0;
-    color: rgba(255, 255, 255, 0.34);
+    color: var(--dark);
 }
 
 /* Lists */
