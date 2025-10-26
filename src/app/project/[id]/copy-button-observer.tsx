@@ -14,10 +14,16 @@ export default function CopyButtonObserver() {
             element.addEventListener('click', handleClick);
         });
 
-        function handleClick(event) {
-            const copyIcon = event.target.querySelector('.copy-svg');
-            const tickIcon = event.target.querySelector('.tick-svg');
-            const code = event.target.parentNode.getElementsByTagName('code')[0]?.textContent;
+        function handleClick(event: Event) {
+            if (!event.target) {
+                return
+            }
+            const target = event.target as HTMLElement;
+
+            const copyIcon = target.querySelector('.copy-svg');
+            const tickIcon = target.querySelector('.tick-svg');
+            const parent = target.parentNode as Element;
+            const code = parent.getElementsByTagName('code')[0]?.textContent;
 
             if (code && copyIcon && tickIcon) {
                 copyToClipboard(code).then(() => {
@@ -28,7 +34,9 @@ export default function CopyButtonObserver() {
                         tickIcon.classList.remove('svg-show');
                         copyIcon.classList.remove('svg-hidden');
                     }, 1000);
-                }).catch(e => {window.alert("Error copying clipboard")});
+                }).catch(e => {
+                    window.alert("Error copying clipboard")
+                });
 
 
             }
@@ -41,5 +49,6 @@ export default function CopyButtonObserver() {
             });
         };
     }, []);
-    return;
+    return (<></>
+    );
 }

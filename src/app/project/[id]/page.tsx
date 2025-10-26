@@ -55,7 +55,7 @@ export default async function ProjectFull({params}: { params: { id: string } }) 
             className="max-w-6xl w-full px-8 transform transition-all duration-300 ">
             <CopyButtonObserver/>
 
-            <div className=" flex flex-col-reverse md:flex-row justify-between w-full items-start md:items-center">
+            <div  className=" flex flex-col-reverse md:flex-row justify-between w-full items-start md:items-center">
 
                 <header className="mb-6">
                     <span
