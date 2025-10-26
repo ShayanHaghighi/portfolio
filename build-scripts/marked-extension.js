@@ -1,6 +1,6 @@
 import hljs from "highlight.js";
 import fs from 'fs-extra';
-
+import {marked} from 'marked';
 const codeBlockPath = './build-scripts/resources/code-block.html';
 
 const raw = fs.readFileSync(codeBlockPath, 'utf8');

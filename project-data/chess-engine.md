@@ -35,16 +35,20 @@ The engine includes:
 
 ---
 
-# Walkthrough
 
-## Engine Architecture Overview
-The engine follows a clear separation between game management, board evaluation, and search logic.
+# Engine Architecture Overview
 
+The flow of logic within the engine is as follows:
 
+1. Generate action set (i.e. all possible moves)
+2. **Prune** action set (for moves that are unlikely to be good/have already been searched)
+3. **Order** action set (to search best lines first)
+4. Perform **static analysis** of board
+5. Repeat
 
----
+These actions are iteratively performed to search the input space of possible moves.
 
-## Board Evaluation
+## Static Board Evaluation
 To evaluate the board, a **material + positional scoring system** is used via **Piece-Square Tables (PSTs)**. Each piece gets a base score plus a bonus or penalty based on its strategic position. For example, the king has the following PST:
 
 |        |        |     |     |     |     |        |        |
@@ -75,21 +79,6 @@ Compare this to the PST for the knight:
 
 Since the knight positional score is greatest in the centre of the board, the engine is likely to place it there, where the knight is most powerful.
 
-## Move Ordering
-
-Moves are sorted to evaluate captures first, increasing pruning success:
-
-```python
-def order_moves(self, board):
-    captures = []
-    non_captures = []
-    for move in board.legal_moves:
-        if board.is_capture(move): captures.append(move)
-        else: non_captures.append(move)
-    captures.sort(key=lambda move: self.staticEval(board), reverse=True)
-    return captures + non_captures
-```
-
 ## Minimax with Alpha-Beta Pruning
 
 This is the main decision function. It recursively evaluates moves while avoiding unnecessary branches:
@@ -110,8 +99,25 @@ The engine stores already evaluated board states for faster reuse:
 ```python
 board_hash = hash(board.fen())
 if board_hash in self.transposition_table:
-    ...
+    <use previously calculated value>
 ```
+
+## Move Ordering
+
+Moves are sorted to evaluate captures first, increasing pruning success:
+
+```python
+def order_moves(self, board):
+    captures = []
+    non_captures = []
+    for move in board.legal_moves:
+        if board.is_capture(move): captures.append(move)
+        else: non_captures.append(move)
+    captures.sort(key=lambda move: self.staticEval(board), reverse=True)
+    return captures + non_captures
+```
+
+
 ## Iterative Deepening
 
 Searches shallow first, then deeper, within a time limit:
@@ -124,31 +130,8 @@ while depth < max_depth and time.time() - start < 2:
 # System Design
 ## Component Diagram
 
-(Insert diagram below – will show at high level the interaction between UI, engine, board logic, etc.)
+TODO
 
-Data Flow
-
-    User clicks a move → Pygame passes input to engine
-
-    Engine generates legal moves via python-chess
-
-    Minimax searches move tree with alpha-beta pruning
-
-    Best move is returned and applied to board
-
-    UI updates
-
-Search Optimization Strategy Diagram
-
-(Diagram showing iterative deepening, alpha-beta pruning, and transposition lookup working together)
-
-Module Responsibilities
-Module	Responsibility
-engine.py	Minimax + Alpha-Beta logic
-evaluation.py	Board scoring via PST
-game.py	Game loop + UI events
-transposition.py	Cache for previously seen boards
-main.py	Entry point
 Future Improvements
 
     Add Zobrist hashing for faster board hashing

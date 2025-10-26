@@ -6,9 +6,12 @@ import {Metadata} from "next";
 import createMetadata from "@/sections/metadata";
 import {Project} from "@/types/project";
 import React from "react";
-import "./markdown-styles.css"
-import "./copy-button.css"
-import './base-16-spacemacs.css'
+import "./styles/markdown-styles.css"
+import "./styles/copy-button.css"
+
+// Code syntax highlighting styles
+// More can be found at https://github.com/highlightjs/highlight.js/tree/5697ae5187746c24732e62cd625f3f83004a44ce/src/styles
+import './styles/base-16-spacemacs.css'
 import CopyButtonObserver from "@/app/project/[id]/copy-button-observer";
 
 
@@ -52,7 +55,7 @@ export default async function ProjectFull({params}: { params: { id: string } }) 
             className="max-w-6xl w-full px-8 transform transition-all duration-300 ">
             <CopyButtonObserver/>
 
-            <div className=" flex flex-row justify-between w-full items-center">
+            <div className=" flex flex-col-reverse md:flex-row justify-between w-full items-start md:items-center">
 
                 <header className="mb-6">
                     <span

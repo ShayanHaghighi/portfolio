@@ -1,3 +1,5 @@
+/* Headings */
+
 h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -18,6 +20,23 @@ h2 {
     padding-top: 0.5rem;
 }
 
+h3 {
+    font-size: 1.25rem;
+    border-bottom: 0.2rem solid rgba(255, 255, 255, 0.23);
+    width: fit-content;
+    margin-bottom: 0.5rem;
+}
+
+/* Text */
+
+strong {
+    background-image: linear-gradient(to right, #ffc7e0, #eacdff);
+    background-clip: text;
+    color: rgba(0, 0, 0, 0);
+}
+
+/* Images */
+
 .img-container {
     width: 100%;
     display: flex;
@@ -30,6 +49,15 @@ h2 {
     font-style: italic;
     color: rgba(255, 255, 255, 0.66);
 }
+
+img{
+    margin: 0 auto;
+    width: 30rem;
+    padding-bottom: 0.5rem;
+    border-bottom: .1rem solid rgba(255, 255, 255, 0.4);
+}
+
+/* Tables */
 
 table {
     width: fit-content;
@@ -52,21 +80,13 @@ td{
     background-color: rgba(255, 255, 255, 0.03);
 }
 
-img{
-    margin: 0 auto;
-    width: 30rem;
-    padding-bottom: 0.5rem;
-    border-bottom: .1rem solid rgba(255, 255, 255, 0.4);
+td strong {
+    text-shadow: 0 0 1rem white;
+    font-size: 1rem;
 
 }
 
-strong {
-    background-image: linear-gradient(to right, #ffc7e0, #eacdff);
-    background-clip: text;
-    color: rgba(0, 0, 0, 0);
-}
-
-
+/* Code */
 
 pre {
     --code-bg: rgba(44, 44, 44, 0.46);
@@ -87,29 +107,44 @@ code {
     text-wrap: wrap;
 }
 
+/* Line breaks */
+
 hr {
     margin: 1rem 0;
     color: rgba(255, 255, 255, 0.34);
 }
 
-h3 {
-    font-size: 1.25rem;
-    border-bottom: 0.2rem solid rgba(255, 255, 255, 0.23);
-    width: fit-content;
-    margin-bottom: 0.5rem;
-}
+/* Lists */
 
 ul {
     margin: 1rem 0;
 }
 
-li{
+ul li{
     --left-gap: 1.5rem;
     margin-left: var(--left-gap);
     position: relative;
 }
 
-li:before {
+ul li:before {
+    left:calc(var(--left-gap) * -1);
+    transform:translateY(-50%);
+    position: absolute;
+    height: 100%;
+    width: 1rem;
+    content: "";
+    rotate: 180deg;
+    border-top: 0.1rem solid white;
+    border-right: 0.1rem solid white;
+}
+
+ol li{
+    --left-gap: 1.5rem;
+    margin-left: var(--left-gap);
+    position: relative;
+}
+
+ol li:before {
     left:calc(var(--left-gap) * -1);
     top:50%;
     transform:translateY(-50%);
