@@ -2,74 +2,112 @@ import projects from "@/data/projects.json";
 import {FaArrowAltCircleLeft} from "react-icons/fa";
 import Link from "next/link";
 import {notFound} from "next/navigation";
-import Image from "next/image";
 import {Metadata} from "next";
 import createMetadata from "@/sections/metadata";
+import {Project} from "@/types/project";
+import React from "react";
+import "./markdown-styles.css"
+import "./copy-button.css"
+import './base-16-spacemacs.css'
+import CopyButtonObserver from "@/app/project/[id]/copy-button-observer";
 
 
 export async function generateStaticParams() {
     return projects.map(p => ({id: p.id}));
 }
 
-type Props = {
+type GenerateProps = {
     params: Promise<{ id: string }>
     searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
 export async function generateMetadata(
-    {params}: Props
+    {params}: GenerateProps
 ): Promise<Metadata> {
 
     const {id} = await params
-
     const project = projects.find(p => p.id === id);
-    if (!project) {
-        return createMetadata({title: "Project Not Found | shaghighi", description: "Project Not Found"})
-    }
-
-    return createMetadata({title: project.title + " | shaghighi", description: project.description, path: id});
+    return project ? createMetadata({
+        title: project.title + " | shaghighi",
+        description: project.description,
+        path: id
+    }) : createMetadata({title: "Project Not Found | shaghighi", description: "Project Not Found"})
 }
 
+
 export default async function ProjectFull({params}: { params: { id: string } }) {
+
+
     const {id} = await params;
-    const project = projects.find(p => p.id === id);
-    console.log(project?.id);
+    const project: Project | undefined = projects.find(p => p.id === id);
     if (!project) {
         notFound();
     }
 
+
     return (
-        <div>
-            <Link
-                href="/"
-                className="w-40 mr-auto mt-4 flex text-lg text-center p-1 rounded-full gradient cursor-pointer"
-            >
+
+
+        <div
+            className="max-w-6xl w-full px-8 transform transition-all duration-300 ">
+            <CopyButtonObserver/>
+
+            <div className=" flex flex-row justify-between w-full items-center">
+
+                <header className="mb-6">
+                    <span
+                        className="text-4xl md:text-5xl font-extrabold leading-tight mb-2 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                        {project.title}
+                    </span>
+                    <div className="text-lg ml-4 text-gray-400">{project.description}</div>
+                </header>
+                <Link
+                    href="/?view=projects"
+                    className="w-40 mb-4 flex text-lg text-center p-1 rounded-full gradient cursor-pointer"
+                >
                 <span
                     className="flex gap-2 flex-row items-center justify-center  py-2 w-full rounded-full border-2 hover:border-transparent border-gray-600 bg-gray-800 hover:bg-white hover:text-black transition-bg duration-300">
                     <FaArrowAltCircleLeft/>
                     <span>Back</span>
                 </span>
-            </Link>
-            <div className="w-full flex flex-col items-center justify-center">
-                <h1 className="text-3xl font-bold mb-4">Under construction</h1>
-                <Image height={100} width={100} src="/UnderCon.svg" alt="projects"/>
+                </Link>
             </div>
 
-            <div>
-                <dl>
-                    <dt className="text-lg font-bold">Id</dt>
-                    <dd>{project.id}</dd>
-                    <dt className="text-lg font-bold">Title</dt>
-                    <dd>{project.title}</dd>
-                    <dt className="text-lg font-bold">Summary</dt>
-                    <dd>{project.description}</dd>
-                    <dt className="text-lg font-bold">Tags</dt>
-                    <dd>{JSON.stringify(project.tags)}</dd>
-                    <dt className="text-lg font-bold">Description</dt>
-                    <dd>
-                        <div dangerouslySetInnerHTML={{__html: project.content}}></div>
-                    </dd>
-                </dl>
+
+            <div className="flex flex-wrap gap-2 mb-8">
+                {
+                    project.tags.map((tag, index) => (
+                        <span
+                            key={index}
+                            className="px-3 py-1 rounded-full bg-purple-600/20 text-purple-300 text-sm border border-purple-600/30 hover:bg-purple-600/30 transition"
+                        >
+{tag}
+</span>
+                    ))}
+            </div>
+
+
+            <section className="prose prose-invert max-w-none mb-10 text-gray-300 leading-relaxed">
+                <div dangerouslySetInnerHTML={{__html: project.content}}></div>
+            </section>
+
+
+            <div className="flex items-center gap-4">
+                {project.repo ? (
+
+                    <Link href={project.repo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg font-semibold shadow-lg hover:scale-105 transition-transform"
+                    >
+                        View Repository
+
+                    </Link>
+                ) : (
+                    <span className="text-sm text-gray-500">Repository link not provided</span>
+                )}
+
+
             </div>
         </div>
     )

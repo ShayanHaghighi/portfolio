@@ -26,3 +26,4 @@ out
 *.sw?
 
 projects.json
+public/images

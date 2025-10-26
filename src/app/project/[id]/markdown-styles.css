@@ -1,0 +1,123 @@
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    font-weight: bolder;
+    background-image: linear-gradient(to right, #e85db1, #c675f9);
+    background-clip: text;
+    color: rgba(0, 0, 0, 0);
+    width: fit-content;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    padding-left: 0.25rem;
+    /*color: #d5a1ff;*/
+    font-weight: bold;
+    padding-top: 0.5rem;
+}
+
+.img-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 0;
+}
+
+.img-text{
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.66);
+}
+
+table {
+    width: fit-content;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.46);
+    border: .2rem solid rgba(132, 127, 151, 0.78);
+    border-radius: 0.1rem;
+}
+
+td{
+    width: 3rem;
+    height: 3rem;
+    font-family: monospace;
+    border: .1rem solid rgba(255, 255, 255, 0.49);
+    text-align: center;
+    padding: 0.5rem 0.5rem;
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+img{
+    margin: 0 auto;
+    width: 30rem;
+    padding-bottom: 0.5rem;
+    border-bottom: .1rem solid rgba(255, 255, 255, 0.4);
+
+}
+
+strong {
+    background-image: linear-gradient(to right, #ffc7e0, #eacdff);
+    background-clip: text;
+    color: rgba(0, 0, 0, 0);
+}
+
+
+
+pre {
+    --code-bg: rgba(44, 44, 44, 0.46);
+    background: var(--code-bg);
+    color: rgb(220, 220, 220);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.46);
+}
+
+code {
+    padding: 1.25rem;
+    font-size: 0.8rem;
+    width: 100%;
+    text-wrap: wrap;
+}
+
+hr {
+    margin: 1rem 0;
+    color: rgba(255, 255, 255, 0.34);
+}
+
+h3 {
+    font-size: 1.25rem;
+    border-bottom: 0.2rem solid rgba(255, 255, 255, 0.23);
+    width: fit-content;
+    margin-bottom: 0.5rem;
+}
+
+ul {
+    margin: 1rem 0;
+}
+
+li{
+    --left-gap: 1.5rem;
+    margin-left: var(--left-gap);
+    position: relative;
+}
+
+li:before {
+    left:calc(var(--left-gap) * -1);
+    top:50%;
+    transform:translateY(-50%);
+    position: absolute;
+    height: 0.5rem;
+    width: 0.5rem;
+    content: "";
+    rotate: 45deg;
+    border-top: 0.1rem solid white;
+    border-right: 0.1rem solid white;
+}

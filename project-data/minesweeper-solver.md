@@ -11,8 +11,7 @@ highlights:
 - Integrated GUI and solver modes
 - Efficient backtracking-based algorithm
 - Supports optimal Minesweeper solutions
-repo: ""
-demo: ""
+repo: "https://github.com/ShayanHaghighi/MinesweeperSolver"
 ---
 Minesweeper Solver is a JavaFX-based desktop application that provides both a playable
 Minesweeper GUI and an AI solver. The solver employs constraint satisfaction and

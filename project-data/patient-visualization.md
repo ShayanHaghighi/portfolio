@@ -16,8 +16,7 @@ highlights:
 - Used Three.js to render 3D lesion models
 - Integrated data visualisation via ApexCharts
 - Placed 2nd out of 44 participants
-repo: ""
-demo: ""
+repo: "https://github.com/Elijah-AO/Dotplot-Website"
 ---
 Built during a 12-hour hackathon, this project focused on enabling clinicians to manage
 and visualise patient data efficiently. The application integrated a 3D lesion viewer

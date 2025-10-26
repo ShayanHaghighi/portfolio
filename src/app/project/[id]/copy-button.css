@@ -1,0 +1,64 @@
+.copy-svg, .tick-svg {
+    pointer-events: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    transition: all;
+    transition-duration: 0.2s;
+}
+
+.copy-code {
+    --icon-size: 2.5rem;
+    color: white;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    position: relative;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    margin: 0.5rem;
+
+}
+
+.tick-svg {
+    color: limegreen;
+}
+
+.copy-svg {
+    color: rgba(255, 255, 255, 0.66);
+}
+
+.success-text {
+    color: rgba(255, 255, 255, 0.58);
+    position: absolute;
+    right: calc(0.5rem + var(--icon-size));
+    top: .5rem;
+    background-color: rgb(32, 38, 45);
+    padding: 0.5rem;
+}
+
+@media (width <= 40rem) {
+    .success-text {
+        display: none;
+    }
+}
+
+.svg-hidden {
+    height: 0;
+    width: 0;
+}
+
+.svg-show {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.copy-code:hover {
+    background-color: #494949;
+}

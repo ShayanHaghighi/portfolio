@@ -11,7 +11,7 @@ tags:
 highlights:
   - "Daily job to create labeling tasks from new images"
   - "Manual retraining job that archives models with metrics"
-repo: "#"
+repo: "https://github.com/ShayanHaghighi/dog-tracker"
 ---
 # Dog Tracking Project
 1. Built an end-to-end computer vision system using Google Cloud Pub/Sub and the Nest SDM API to stream and process 1000s real-time camera events daily for indoor dog tracking.
