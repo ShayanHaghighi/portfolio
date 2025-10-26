@@ -84,14 +84,14 @@ Since the knight positional score is greatest in the centre of the board, the en
 This is the main decision function. It recursively evaluates moves while avoiding unnecessary branches:
 
 ```python
-eval, best_move = self.minimax(board, depth, -math.inf, math.inf, maximisingPlayer)
+eval, best_move = self.minimax(board, depth, alpha=-math.inf, beta=math.inf, maximisingPlayer)
 ```
 
-- If it's the AI's turn → Maximising player
+1. If it's the AI's turn → Maximising player
 
-- If it's opponent's turn → Minimising player
+2. If it's opponent's turn → Minimising player
 
-- Stops early if an alpha-beta cutoff is found
+3. Stops early if an alpha-beta cutoff is found
 
 ## Transposition Table Support
 
@@ -123,7 +123,7 @@ def order_moves(self, board):
 Searches shallow first, then deeper, within a time limit:
 
 ```python
-while depth < max_depth and time.time() - start < 2:
+while depth < max_depth and time.time() - start < 2: # stops attempt after 2 seconds
     eval, best_move = self.minimax(...)
 ```
 

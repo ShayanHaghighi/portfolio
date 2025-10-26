@@ -13,6 +13,7 @@ import "./styles/copy-button.css"
 // More can be found at https://github.com/highlightjs/highlight.js/tree/5697ae5187746c24732e62cd625f3f83004a44ce/src/styles
 import './styles/base-16-spacemacs.css'
 import CopyButtonObserver from "@/app/project/[id]/copy-button-observer";
+import Tags from "@/components/main/tags";
 
 
 export async function generateStaticParams() {
@@ -69,7 +70,7 @@ export default async function ProjectFull({params}: { params: { id: string } }) 
                     className="w-40 mb-4 flex text-lg text-center p-1 rounded-full gradient cursor-pointer"
                 >
                 <span
-                    className="flex gap-2 flex-row items-center justify-center  py-2 w-full rounded-full border-2 hover:border-transparent border-gray-600 bg-gray-800 hover:bg-white hover:text-black transition-bg duration-300">
+                    className="flex gap-2 flex-row items-center justify-center  py-2 w-full rounded-full border-2 hover:border-transparent border-gray-600 dark:bg-gray-800 bg-gray-200 hover:bg-gray-400 dark:hover:bg-white hover:text-black  hover:text-black transition-bg duration-300">
                     <FaArrowAltCircleLeft/>
                     <span>Back</span>
                 </span>
@@ -77,20 +78,10 @@ export default async function ProjectFull({params}: { params: { id: string } }) 
             </div>
 
 
-            <div className="flex flex-wrap gap-2 mb-8">
-                {
-                    project.tags.map((tag, index) => (
-                        <span
-                            key={index}
-                            className="px-3 py-1 rounded-full bg-purple-600/20 text-purple-300 text-sm border border-purple-600/30 hover:bg-purple-600/30 transition"
-                        >
-{tag}
-</span>
-                    ))}
-            </div>
+                <Tags tags={project.tags}/>
 
 
-            <section className="prose prose-invert max-w-none mb-10 text-gray-300 leading-relaxed">
+            <section className="prose prose-invert max-w-none mb-10 dark:text-gray-300 leading-relaxed">
                 <div dangerouslySetInnerHTML={{__html: project.content}}></div>
             </section>
 

@@ -8,7 +8,8 @@ import createMetadata from "@/sections/metadata";
 
 export const metadata: Metadata = createMetadata({
     title: "Shayan's Portfolio",
-    description: "A portfolio website outlining my experiences and projects"
+    description: "A portfolio website outlining my experiences and projects",
+
 })
 
 export const runtime = 'edge';

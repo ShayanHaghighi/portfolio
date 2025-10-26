@@ -10,7 +10,7 @@ export default function About() {
                 >
                     <h1 className="text-4xl font-semibold">About Me</h1>
 
-                    <span className="text-gray-300 max-w-xl text-lg">
+                    <span className="dark:text-gray-300 max-w-xl text-lg">
                             4th-year Computer Science student at the <strong>University of Birmingham</strong>, predicted 1st Class
                             Honours (avg. 85%).
                             I have hands-on
@@ -25,7 +25,7 @@ export default function About() {
                             passionate about combining technical skill with creativity to deliver polished, impactful
                             projects.
                         </span>
-                    <div className="mt-6 text-sm text-gray-400">
+                    <div className="mt-6 text-sm dark:text-gray-400">
                         Current focus: Creating an AI note management tool that performs entity linking, organising
                         notes based on the Wikipedia knowledge graph.
                     </div>

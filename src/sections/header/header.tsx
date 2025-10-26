@@ -14,9 +14,9 @@ export default function Header() {
                     </Link>
                     <div>
                         <div className="text-sm font-semibold">Shayan Haghighi</div>
-                        <div className="text-xs text-gray-300">Software Engineer — Full Stack · ML · Automated Testing
+                        <div className="text-xs dark:text-gray-300">Software Engineer — Full Stack · ML · Automated Testing
                         </div>
-                        <div className="text-xs text-gray-400">shayan.haghighi04@gmail.com</div>
+                        <div className="text-xs dark:text-gray-400 text-gray-600">shayan.haghighi04@gmail.com</div>
                     </div>
                 </div>
 

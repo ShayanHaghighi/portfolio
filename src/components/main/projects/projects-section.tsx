@@ -5,7 +5,7 @@ export default function ProjectSection({projects}: { projects: Project[] }) {
     return (
         <section id="projects" className="mt-2">
 
-            <h2 className="text-2xl font-bold">
+            <h2 className="text-4xl font-bold">
                 Key projects
             </h2>
 
