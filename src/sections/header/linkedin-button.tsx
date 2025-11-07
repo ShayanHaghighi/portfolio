@@ -7,7 +7,7 @@ export default function LinkedinButton() {
                 target="_blank"
                 className="flex-1 flex flex-row items-center justify-center gap-2 px-2 py-2 h-10 bg-[#0a66c2] text-white rounded hover:brightness-60 transition"
             >
-                <FaLinkedin className="size-5"/>
+                <FaLinkedin className="size-5 sm:inline-block hidden"/>
                 <span className="font-semibold">LinkedIn</span>
             </a>
     )

@@ -1,16 +1,17 @@
 import LinkedinButton from "./linkedin-button";
 import Divider from "./divider";
 import {CvButton} from "./cv-button";
-import ThemeToggle from "@/components/ThemeToggle";
+import ThemeToggle from "@/components/theme-toggle";
 
 
 export default function ContactButtons() {
 
 
     return (
-        <nav className="flex items-center justify-center gap-2 sm:gap-4 text-sm w-full md:min-w-[32em] md:w-1/3">
+        <nav
+            className="flex flex-wrap flex-row items-center justify-center gap-2 sm:gap-4 text-sm w-full md:min-w-[32em] md:w-1/3">
 
-            <ThemeToggle/>
+            <CvButton/>
 
             <Divider/>
 
@@ -18,7 +19,7 @@ export default function ContactButtons() {
 
             <Divider/>
 
-            <CvButton/>
+            <ThemeToggle/>
 
         </nav>
     )

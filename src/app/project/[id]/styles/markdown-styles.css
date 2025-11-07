@@ -183,6 +183,10 @@ ul li:before {
     }
 }
 
+ol {
+    margin: 2rem;
+}
+
 ol li{
     --left-gap: 1.5rem;
     margin-left: var(--left-gap);

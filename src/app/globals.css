@@ -34,6 +34,7 @@ body {
     transform: translateY(20px);
     transition: all 0.6s ease-out;
 }
+
 .fade-up-on-view.visible {
     opacity: 1;
     transform: translateY(0);
@@ -66,20 +67,73 @@ body {
     --text-color: white;
 }
 
-.def{
-    color:var(--text-color);
-    background-color:var(--bg-color);
+
+.section-button {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    padding-block: 0.75em;
+    cursor: pointer;
+    border: solid white 1px;
+    font-size: 0.875em;
+    transition: all 0.6s ease-out;
+    background-color: var(--section-button-default-bg);
+
 }
 
-@media (prefers-color-scheme: dark) {
-    .bg-grad {
-        background-image: linear-gradient(to bottom right, rgb(1, 7, 18), rgb(5, 15, 41), rgb(26, 41, 57));
-    }
+.section-button:hover {
+    background-image: linear-gradient(to bottom left, var(--section-button-hover-color-1), var(--section-button-hover-color-2));
+    border-color: var(--section-button-hover-border-color);
+    box-shadow: 0 0 3px var(--section-button-shadow-color);
+
 }
 
-@media (prefers-color-scheme: light) {
-    .bg-grad {
-        background-image: linear-gradient(to bottom right, rgb(254, 247, 237), white, white);
+.section-button-selected{
+    background-image: linear-gradient(to bottom right,var(--section-button-selected-color-1), var(--section-button-selected-color-2));
+    border-color: var(--section-button-selected-border-color);
+    box-shadow: 0 0 2px var(--section-button-shadow-color);
 
-    }
 }
+:root{
+    --section-button-default-bg: white;
+    --section-button-hover-color-1: oklch(0.927 0.032 274.121);
+    --section-button-hover-color-2: oklch(0.938 0.022 344.22);
+    --section-button-hover-border-color: oklch(87% 0.065 274.039);
+    --section-button-shadow-color: oklch(0.791 0.14 308.881);
+    --section-button-selected-color-1: oklch(0.834 0.083 277.689);
+    --section-button-selected-color-2: oklch(94.8% 0.028 342.258);
+    --section-button-selected-border-color: oklch(78.5% 0.115 274.713);
+}
+[data-theme='dark'] {
+    --section-button-default-bg: transparent;
+    --section-button-hover-color-1: oklch(20.8% 0.042 265.755);
+    --section-button-hover-color-2: oklch(37.9% 0.146 265.522);
+    --section-button-hover-border-color: oklch(87% 0.065 274.039);
+    --section-button-shadow-color: oklch(0.791 0.14 308.881);
+    --section-button-selected-color-1: oklch(12.9% 0.042 264.695);
+    --section-button-selected-color-2: oklch(28.2% 0.091 267.935);
+    --section-button-selected-border-color: oklch(78.5% 0.115 274.713);
+}
+
+
+/*.def{*/
+/*    color:var(--text-color);*/
+/*    background-color:var(--bg-color);*/
+/*}*/
+
+/*@media (prefers-color-scheme: dark) {*/
+/*    .bg-grad {*/
+/*        background-image: linear-gradient(to bottom right, rgb(1, 7, 18), rgb(5, 15, 41), rgb(26, 41, 57));*/
+/*    }*/
+/*}*/
+
+/*@media (prefers-color-scheme: light) {*/
+/*    .bg-grad {*/
+/*        background-image: linear-gradient(to bottom right, rgb(254, 247, 237), white, white);*/
+
+/*    }*/
+/*}*/
+

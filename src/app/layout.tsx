@@ -11,15 +11,13 @@ export default async function Layout({children}: { children: React.ReactNode }) 
                     __html: `
               (function() {
                 let theme;
-                try {
                   theme = localStorage.getItem('theme');
-                } catch (e) {}                
 
                 if (theme === 'dark') {
                 console.log("dark from localStorage");
                   document.documentElement.setAttribute('data-theme','dark');
                   return;
-                } else {
+                } else if(theme) {
                 console.log("light from localStorage");
                    document.documentElement.removeAttribute('data-theme');
                 return;

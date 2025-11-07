@@ -70,7 +70,7 @@ export default async function ProjectFull({params}: { params: { id: string } }) 
                     className="w-40 mb-4 flex text-lg text-center p-1 rounded-full gradient cursor-pointer"
                 >
                 <span
-                    className="flex gap-2 flex-row items-center justify-center  py-2 w-full rounded-full border-2 hover:border-transparent border-gray-600 dark:bg-gray-800 bg-gray-200 hover:bg-gray-400 dark:hover:bg-white hover:text-black  hover:text-black transition-bg duration-300">
+                    className="flex gap-2 flex-row items-center justify-center min-w-24 py-2 w-full rounded-full border-2 hover:border-transparent border-gray-600 dark:bg-gray-800 bg-gray-200 hover:bg-gray-400 dark:hover:bg-white hover:text-black transition-bg duration-300">
                     <FaArrowAltCircleLeft/>
                     <span>Back</span>
                 </span>

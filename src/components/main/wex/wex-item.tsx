@@ -15,7 +15,7 @@ export default function WexItem({workExp, startDate, endDate}: WexItemProps) {
             <div className="flex flex-row justify-start gap-6">
                 <TimelineChunk/>
 
-                <div className="flex-1 my-8 fade-up-on-view">
+                <div className="flex-1 mb-12 fade-up-on-view">
                     <WexHeader workExp={workExp} startDate={startDate} endDate={endDate}/>
 
                     <p className="text-gray-800 dark:text-gray-300 mt-3 text-md">{workExp.shortDescription}</p>

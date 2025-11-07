@@ -11,7 +11,7 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "framer-motion": "^12.23.24",
+    "@headlessui/react": "^2.2.9",
     "fs-extra": "^11.3.2",
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.11.1",
