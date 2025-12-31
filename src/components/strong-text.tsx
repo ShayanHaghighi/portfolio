@@ -1,6 +1,6 @@
-export default function StrongText({children}: { children: React.ReactNode }) {
+export default function StrongText({ classname, children }: { classname: string | undefined, children: React.ReactNode }) {
     return (
-        <strong className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-700 to-pink-700 dark:from-indigo-400 dark:to-pink-400">
+        <strong className={`bg-clip-text ${classname} text-transparent bg-gradient-to-r from-strong-1 to-strong-2`}>
             {children}
         </strong>
     )

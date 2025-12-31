@@ -1,14 +1,14 @@
 import "./globals.css";
 import Header from "@/sections/header/header";
-import {Footer} from "@/sections/footer/Footer";
+import { Footer } from "@/sections/footer/Footer";
 
-export default async function Layout({children}: { children: React.ReactNode }) {
+export default async function Layout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
-        <head>
-            <script
-                dangerouslySetInnerHTML={{
-                    __html: `
+            <head>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
               (function() {
                 let theme;
                   theme = localStorage.getItem('theme');
@@ -37,23 +37,23 @@ export default async function Layout({children}: { children: React.ReactNode }) 
                 
               })();
             `,
-                }}
-            />
-        </head>
-        <body>
+                    }}
+                />
+            </head>
+            <body>
 
-        <div
-            className="min-h-screen min-w-screen bg-gradient-to-br dark:from-gray-950 dark:via-gray-850 dark:to-gray-800 to-indigo-200 from-purple-100 dark:text-gray-100 antialiased">
+                <div
+                    className="min-h-screen min-w-screen bg-gradient-to-br from-canvas-gradient-from to-50% to-canvas-gradient-to">
 
-            <Header/>
-            <main className="max-w-6xl mx-auto px-6 py-6 flex flex-col items-center">
-                {children}
-                <Footer/>
-            </main>
+                    <Header />
+                    <main className="max-w-6xl mx-auto px-6 py-6 flex flex-col items-center text-text-primary">
+                        {children}
+                        <Footer />
+                    </main>
 
-        </div>
+                </div>
 
-        </body>
+            </body>
         </html>
     );
 }
