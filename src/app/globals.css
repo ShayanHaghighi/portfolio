@@ -61,6 +61,10 @@
   --color-text-inverse: oklch(var(--theme-base00));
   --color-text-secondary: oklch(var(--theme-base05));
   --color-text-tertiary: oklch(var(--theme-fg)/0.6);
+  --color-text-catppuccin: oklch(var(--theme-base0E));
+
+  --color-catppuccin-1: oklch(var(--theme-base09));
+  --color-catppuccin-2: oklch(var(--theme-base08));
 
   --color-wex-company: var(--color-text-tertiary);
   --color-wex-date: var(--color-text-tertiary);
@@ -111,6 +115,15 @@
   --color-code-text: oklch(var(--theme-base00));
   --color-code-copy-bg: oklch(var(--theme-base00));
   --color-code-copy-fg: oklch(var(--theme-base00));
+}
+
+.catppuccin-rainbow {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--color-catppuccin-1),
+    var(--color-catppuccin-2)
+  );
+  color: var(--color-text-inverse);
 }
 
 h1 {

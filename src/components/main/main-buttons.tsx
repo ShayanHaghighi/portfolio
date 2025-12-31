@@ -16,7 +16,7 @@ function SectionButton({ children, sectionKey, currentSection, idx }: { children
 
 export default function MainButtons({ currentSection, }: { currentSection: Section }) {
     return <div
-        className=" w-full flex flex-col sm:flex-row justify-center items-center gap-4 px-4 my-6">
+        className=" w-full flex flex-col sm:flex-row justify-center items-center gap-4 px-4 my-2">
         {<SectionButton idx={2} sectionKey={"workexp"} currentSection={currentSection} >
             <MdWork className="text-xl" />
             <span className="font-bold text-xl">

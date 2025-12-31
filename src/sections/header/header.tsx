@@ -9,7 +9,7 @@ export default function Header() {
 
             <div className="flex items-center gap-3">
                 <Link
-                    className="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-500 to-pink-500 flex items-center justify-center font-bold text-white cursor-pointer"
+                    className="w-10 h-10 rounded-lg catppuccin-rainbow flex items-center justify-center font-bold text-white cursor-pointer"
                     href="/"
                 >SH
                 </Link>
