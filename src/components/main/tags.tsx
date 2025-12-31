@@ -1,12 +1,12 @@
-export default function Tags({tags}: { tags: string[] }) {
+export default function Tags({ tags }: { tags: string[] }) {
 
     return (
         <div className="flex flex-wrap gap-2">
             {tags.map((tag) =>
                 <span key={tag}
-                      className="text-xs px-2 py-1 rounded-full text-gray-100 font-bold bg-gray-800 border border-gray-700">
-                      {tag}
-                    </span>
+                    className="text-xs cursor-default px-2 py-1 rounded-full text-tags-text bg-tags-bg border border-tags-border hover:border-tags-hover-border">
+                    {tag}
+                </span>
             )}
         </div>
     )
