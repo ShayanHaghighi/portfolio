@@ -1,9 +1,10 @@
-import type {WorkExp} from "@/types/workExp.ts";
+import type { WorkExp } from "@/types/workExp.ts";
 import WexItem from "./wex-item";
+import BgText from "@/components/bg-text";
 
-export default function WorkExperience({workExp}: { workExp: WorkExp[] }) {
+export default function WorkExperience({ workExp }: { workExp: WorkExp[] }) {
 
-    const dateFormat: Intl.DateTimeFormatOptions = {year: "numeric", month: "short"};
+    const dateFormat: Intl.DateTimeFormatOptions = { year: "numeric", month: "short" };
 
     function isValidDate(d: Date) {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -23,15 +24,15 @@ export default function WorkExperience({workExp}: { workExp: WorkExp[] }) {
 
     return (
         <section id="projects" className="mt-2">
-            <h2 className="text-4xl font-bold">Work Experience</h2>
-            <p className="text-gray-400 mt-2 max-w-2xl">
+            <h2 className="text-4xl font-bold section-header-2 ">Work Experience</h2>
+            <BgText>
                 Key work experience in recent years
-            </p>
+            </BgText>
 
-            <div className="mt-6 flex flex-col flex-nowrap gap-0 px-[10%]">
+            <div className="mt-6 flex flex-col flex-nowrap gap-0 sm:px-[10%] ">
                 {workExp.map((workExp) => (
                     <WexItem key={workExp.id} workExp={workExp} startDate={formatDate(workExp.startDate)}
-                             endDate={formatDate(workExp.endDate)}
+                        endDate={formatDate(workExp.endDate)}
                     />
                 ))}
             </div>

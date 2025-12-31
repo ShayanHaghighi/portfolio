@@ -1,6 +1,6 @@
 export default function TimelineChunk() {
-    return <div className="flex flex-col items-center h-auto translate-y-2">
-        <div className="size-4 rounded-full border-2 -m-0 border-gray-500"></div>
-        <div className="w-0.5 h-full bg-gray-500"></div>
+    return <div className="flex flex-col items-center h-auto translate-y-10">
+        <div className="size-4 rounded-full -m-0 bg-timeline-blob"></div>
+        <div className="w-0 h-full border-2 border-l-0 border-dashed border-timeline-dash"></div>
     </div>;
 }
