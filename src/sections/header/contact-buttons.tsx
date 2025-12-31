@@ -1,5 +1,4 @@
 import LinkedinButton from "./linkedin-button";
-import Divider from "./divider";
 import { CvButton } from "./cv-button";
 import ThemeToggle from "@/components/theme-toggle";
 
@@ -13,11 +12,7 @@ export default function ContactButtons() {
 
             <CvButton />
 
-            {/*<Divider />*/}
-
             <LinkedinButton />
-
-            {/*<Divider />*/}
 
             <ThemeToggle />
 
