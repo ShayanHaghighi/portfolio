@@ -1,5 +1,4 @@
 import { IoDocumentText } from "react-icons/io5";
-import { PiReadCvLogoFill } from "react-icons/pi";
 
 export function CvButton() {
     return <a

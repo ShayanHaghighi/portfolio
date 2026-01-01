@@ -1,5 +1,5 @@
 "use client"
-import {useEffect} from "react";
+import { useEffect } from "react";
 
 function copyToClipboard(text: string) {
     return navigator.clipboard.writeText(text);

@@ -2,7 +2,6 @@ import StrongText from "@/components/strong-text";
 import BgText from "../bg-text";
 import Image from 'next/image'
 import Link from "next/link";
-import { PiArrowLineUpRight } from "react-icons/pi";
 import { FiArrowUpRight } from "react-icons/fi";
 
 export default function About() {
@@ -40,7 +39,7 @@ export default function About() {
                     notes based on the Wikipedia knowledge graph.
                 </BgText>
                 <span>
-                    This website's theme is based on the <Image style={{
+                    {"This website's theme is based on the "}<Image style={{
                         width: "2rem",
                         border: "none"
                     }} className="inline" alt="catppuccin logo" height="30" width="30" src="/catppuccin.svg" />
