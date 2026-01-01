@@ -1,6 +1,7 @@
 import BgText from "@/components/bg-text";
 import ContactButtons from "./contact-buttons";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
     return (
@@ -11,7 +12,8 @@ export default function Header() {
                 <Link
                     className="w-10 h-10 rounded-lg catppuccin-rainbow flex items-center justify-center font-bold text-white cursor-pointer"
                     href="/"
-                >SH
+                >
+                    <Image src="/oogway-small.png" alt="logo" width={50} height={50} className="w-full h-full" />
                 </Link>
                 <div>
                     <div className="text-md text-text-primary font-semibold">Shayan Haghighi</div>

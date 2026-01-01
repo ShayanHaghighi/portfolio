@@ -1,6 +1,6 @@
-import type {Metadata} from "next";
+import type { Metadata } from "next";
 
-const defaultImage = "/og-image.png"
+const defaultImage = "/oogway-small.png"
 
 type MetadataArgs = {
     title: string;
@@ -9,7 +9,7 @@ type MetadataArgs = {
     path?: string
 }
 
-export default function createMetadata({title, description, imagePath, path}: MetadataArgs): Metadata {
+export default function createMetadata({ title, description, imagePath, path }: MetadataArgs): Metadata {
 
     const image = imagePath ?? defaultImage
     const urlPath = path ?? "/"
@@ -24,7 +24,7 @@ export default function createMetadata({title, description, imagePath, path}: Me
             title: title,
             description: description,
             siteName: title,
-            images: {url: image} /// height and width?
+            images: { url: image } /// height and width?
         },
         twitter: {
             card: 'summary_large_image',
