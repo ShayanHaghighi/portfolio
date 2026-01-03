@@ -19,7 +19,7 @@ export default function MainButtons({ currentSection, }: { currentSection: Secti
         className=" w-full flex flex-col sm:flex-row justify-center items-center gap-4 px-4 my-2">
         {<SectionButton idx={2} sectionKey={"workexp"} currentSection={currentSection} >
             <MdWork className="text-xl" />
-            <span className="font-bold text-xl">
+            <span className="text-center font-bold text-xl">
                 Work Experience
             </span>
         </SectionButton>

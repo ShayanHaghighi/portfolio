@@ -8,7 +8,7 @@ export default function ContactButtons() {
 
     return (
         <nav
-            className="flex flex-wrap flex-row items-center justify-end gap-2 sm:gap-4 text-sm w-full md:min-w-[32em] md:w-1/3">
+            className="flex flex-row justify-center items-center sm:justify-end gap-2 sm:gap-4 text-sm w-full sm:min-w-[26em] sm:w-1/3">
 
             <CvButton />
 
