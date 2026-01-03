@@ -3,7 +3,7 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 :root {
-  /* based on the "Catpuccin Machiatto" theme */
+  /* based on the "Catppuccin Machiatto" theme */
   --theme-base00: 95.78% 0.006 264.5;
   --theme-base01: 93.35% 0.009 264.5;
   --theme-base02: 85.75% 0.014 268.5;
@@ -25,7 +25,7 @@
 }
 
 [data-theme="dark"] {
-  /* based on the "Catpuccin Mocha" theme */
+  /* based on the "Catppuccin Mocha" theme */
   --theme-base00: 24.29% 0.03 283.9;
   --theme-base01: 21.55% 0.025 284.1;
   --theme-base02: 32.4% 0.032 282;
