@@ -34,7 +34,7 @@ export default function CopyButtonObserver() {
                         tickIcon.classList.remove('svg-show');
                         copyIcon.classList.remove('svg-hidden');
                     }, 1000);
-                }).catch(e => {
+                }).catch(_e => {
                     window.alert("Error copying clipboard")
                 });
 
