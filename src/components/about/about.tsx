@@ -39,16 +39,21 @@ export default function About() {
                     notes based on the Wikipedia knowledge graph.
                 </BgText>
                 <span>
-                    {"This website's theme is based on the "}<Image style={{
-                        width: "2rem",
-                        border: "none"
-                    }} className="inline" alt="catppuccin logo" height="30" width="30" src="/catppuccin.svg" />
-                    {" "}
+                    {"This website's theme is based on the "}
 
-                    <Link target="_blank" href="https://catppuccin.com" className="border-b-2 border-text-catppuccin border-dotted cursor-pointer text-text-catppuccin font-bold">
-                        Catppuccin base-16 theme
-                        <FiArrowUpRight className="inline" />
-                    </Link>
+                    <div className="inline-block">
+                        <Image style={{
+                            width: "2rem",
+                            border: "none"
+                        }} className="inline" alt="catppuccin logo" height="30" width="30" src="/catppuccin.svg" />
+
+                        {" "}
+
+                        <Link target="_blank" href="https://github.com/catppuccin/base16" className="border-b-2 border-text-catppuccin border-dotted cursor-pointer text-text-catppuccin font-bold">
+                            Catppuccin base-16 theme
+                            <FiArrowUpRight className="inline" />
+                        </Link>
+                    </div>
 
                 </span>
 
