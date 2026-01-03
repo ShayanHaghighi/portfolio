@@ -6,11 +6,11 @@ import Image from "next/image";
 export default function Header() {
     return (
         <header
-            className=" max-w-6xl mx-auto px-6 py-3 sm:py-6 flex sm:flex-row flex-col gap-4 sm:items-center items-start justify-between border-b-2 border-canvas-secondary">
+            className=" max-w-6xl mx-auto px-6 py-3 sm:py-6 flex md:flex-row flex-col gap-4 md:items-center items-start justify-between border-b-2 border-canvas-secondary">
 
             <div className="flex items-center gap-3">
                 <Link
-                    className="w-10 h-10 rounded-lg flex items-center justify-center font-bold text-white cursor-pointer"
+                    className="w-10 h-10 rounded-lg catppuccin-rainbow flex items-center justify-center font-bold text-white cursor-pointer"
                     href="/"
                 >
                     <Image src="/oogway-small.png" alt="logo" width={50} height={50} className="w-full h-full" />
