@@ -7,7 +7,7 @@ import { FaGitAlt } from "react-icons/fa";
 function SectionButton({ children, sectionKey, currentSection, idx }: { children: React.ReactNode, sectionKey: string, currentSection: "projects" | "workexp", idx: number }) {
     return (<Link
         className={`section-button  ${sectionKey === currentSection ? `section-button-${idx}-selected` : `section-button-${idx}-unselected`}`}
-        href={`/?view=${sectionKey}`}
+        href={sectionKey === "projects" ? "/projects" : "/"}
         scroll={false}
     >
         {children}
